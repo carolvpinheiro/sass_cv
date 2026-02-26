@@ -1,0 +1,22 @@
+@use 'variables';
+@use 'functions';
+@use 'mixins';
+
+header {
+
+}
+
+body {
+    background-color: variables.$background-color;
+    width: variables.$main-width;
+    margin: auto;
+    font-family: variables.$font-stack;
+    
+    @if variables.$theme == dark {
+        background-color: black;
+        color: white;
+    } @else {
+        background-color: white;
+        color: black;
+    }
+}
