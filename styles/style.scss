@@ -2,21 +2,127 @@
 @use 'functions';
 @use 'mixins';
 
-header {
-
-}
 
 body {
-    background-color: variables.$background-color;
     width: variables.$main-width;
     margin: auto;
     font-family: variables.$font-stack;
-    
+    text-align: justify;
+    line-height: 1.5;
+    text-size-adjust: 20%;
+    display: grid;
+
+    main {
+        padding-top: 32px;
+    }
+}
+
+// Dark mode main content
+.main-content {
     @if variables.$theme == dark {
-        background-color: black;
+        background-color: variables.$background-dark-color;
         color: white;
     } @else {
-        background-color: white;
-        color: black;
+        background-color: variables.$background-light-color;
+        color: variables.$text-color;
     }
+}
+
+// icons nav
+@each $name in variables.$icons {
+    .icon-#{$name} {
+        padding: 4px 32px 16px;
+        color: variables.$text-color;
+        display: inline;
+        background: url('../images/icons/#{$name}.png') no-repeat left top;
+        width: 100px;
+        font-family: variables.$font-stack;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+    }
+}
+
+// Space between contents
+@each $name in variables.$contents {
+    .#{$name} {
+        padding-top: 32px;
+        h4 {
+            line-height: 0.5;
+        }
+    }
+}
+
+// Placeholder (format list space)
+%toollist {
+    padding-top: 16px;
+    .job-content {
+        padding: functions.spacing(0.5);
+    }
+}
+
+// Horizontal list with mixin
+.skills {
+    @include mixins.horizontal-list;
+}
+
+// Vertical lists with mixin
+.army {
+    @include mixins.horizontal-list(false);
+    @extend %toollist;
+}
+
+.coles {
+    @include mixins.horizontal-list(false);
+    @extend %toollist;
+}
+
+.iebt {
+    @include mixins.horizontal-list(false);
+    @extend %toollist;
+}
+
+// Grid system max 4 cards per row
+.card-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: functions.spacing(2);
+    margin-bottom: functions.spacing(3);
+  }
+
+// Placeholder (base card style)
+%card-base {
+    background-color: variables.$background-card-color;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: functions.spacing(2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+// Card variations
+@each $name, $path in variables.$projects {
+    .#{$name}-projects {
+        @extend %card-base;
+        img {
+            background-image: url(#{$path});
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100%;
+            width: 100px;
+            padding: functions.spacing(8);
+        }
+    }
+}
+
+// Reset button with mixin
+button {
+    @include mixins.reset-btn;
 }
