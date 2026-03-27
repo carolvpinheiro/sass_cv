@@ -6,21 +6,28 @@
     <title>Carolina Vasconcelos Pinheiro - CV</title>
 </head>
 
-<body>
+<body class="main-content">
     <header>
         <h1>
             Carolina Vasconcelos Pinheiro
         </h1>
     </header>
     <nav>
-        <a href="https://www.linkedin.com/in/carolina-vasconcelos-pinheiro/">
+        <a 
+            class="icon-linkedin"
+            href="https://www.linkedin.com/in/carolina-vasconcelos-pinheiro/"
+            target="_blank"
+        >
             Linkedin
         </a>
-        <a href="https://github.com/carolvpinheiro">
+        <a class="icon-github"
+            href="https://github.com/carolvpinheiro"
+            target="_blank"
+        >
             GitHub
         </a>
-        <a href="#">Email</a>
-        <a href="#">0413 528 832</a>
+        <a class="icon-email" href="#">carolinavpinheiro@gmail.com</a>
+        <a class="icon-phone" href="#">0413 528 832</a>
     </nav>
     <main>
         <div class="summary">
@@ -43,33 +50,90 @@
         <div class="skills">
             <h3>Key Skills</h3>
             <ul>
-                <li>Full-stack Developer – HTML, CSS, TypeScript,
-                    React, PHP, Laravel, Node.js</li>
+                <li>Full-stack Developer</li>
                 <li>Database Management – MySQL, SQL</li>
                 <li>RESTful API Integration</li>
                 <li>Agile Methodologies</li>
                 <li>Data Analysis and Visualisation – Python, Power BI</li>
                 <li>Cyber Security Fundamentals</li>
-                <li>Ability to set priorities and meet deadlines</li>s
+                <li>Ability to set priorities and meet deadlines</li>
                 <li>Collaborative mindset</li>
                 <li>Critical thinking and innovative problem-solving</li>
             </ul>
         </div>
-        <div class="qualifications">
+        <section class="qualifications">
             <h3>Academic Qualifications</h3>
-            <ul>
-                <li>
-                    Diploma of Information Technology (Back End Web Development), NM TAFE
-                    <p>Current</p>
-                    <button value="read-more">See Projects</button>
-                </li>
-                <li>
-                    Bachelor of Tourism, Federal University of Juiz de Fora, Brazil
-                    <p>2017</p>
-                    <button value="read-more">See Projects</button>
-                </li>
-            </ul>
-        </div>
+            <div class="tafe">
+                <div>
+                    <p>Diploma of Information Technology (Back End Web Development), NM TAFE | Current</p>
+                </div>
+                <button class="projects-btn" value="tafe-projects">See Projects</button>
+                <div class="card-section">
+                    <div class="tafe1-projects">
+                        <img/>
+                        <h4>Data Analysis</h4>
+                        <p>This project provid a analise based on ACMA data on cell phone use by children in Australia, using Power BI.</p>
+                    </div>
+                    <div class="tafe2-projects">
+                        <img/>
+                        <h4>Artificial Intelligence</h4>
+                        <p>This project will use supervised machine learning with classification models to develop a hospital system capable of identifying a patient's disease based on their symptoms.</p>
+                    </div>
+                    <div class="tafe3-projects">
+                        <img/>
+                        <h4>Resume Using Sass</h4>
+                        <p>This is a work-in-progress project for an online summary using Sass, with future improvements in responsiveness planned.</p>
+                        <a href="https://github.com/carolvpinheiro/sass_cv">See more</a>
+                    </div>
+                </div>
+            <div>
+            <div class="trybe">
+                <div>
+                    <p>Software Development Introduction, Front-end, Back-end and Computer Science at Trybes | 2022</p>
+                </div>
+                <button class="projects-btn" value="trybe-projects">See Projects</button>
+                <div class="card-section">
+                    <div class="trybe1-projects">
+                        <img/>
+                        <h4>Algorithms</h4>
+                        <p>This is a project dedicated to practicing concepts related to algorithms.</p>
+                        <a href="https://github.com/carolvpinheiro/algorithms">See more</a>
+                    </div>
+                    <div class="trybe2-projects">
+                        <img/>
+                        <h4>The Recipe App</h4>
+                        <p>The recipe app project allows users to search, filter, favorite, share, and track the entire progress of recipe preparation.</p>                        
+                        <a href="https://github.com/carolvpinheiro/recipes-app">See more</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="ufjf">
+                <div>
+                    <p>Bachelor of Tourism, Federal University of Juiz de Fora, Brazil | 2017</p>
+                </div>
+                <button class="projects-btn" value="ufjf-projects">See Projects</button>
+                <div class="card-section">
+                    <div class="ufjf1-projects">
+                        <img/>
+                        <h4>Fair of Solidarity Economy</h4>
+                        <p>Graffiti workshop for children, dance performance and musical attractions are among the free activities.</p>
+                        <a href="https://tribunademinas.com.br/noticias/cidade/13-09-2017/i-feira-de-economia-solidaria-e-agroecologia-sera-realizada-neste-sabado-na-ufjf.html">See more</a>
+                    </div>
+                    <div class="ufjf2-projects">
+                        <img/>
+                        <h4>Community-Based Tourism</h4>
+                        <p>Article about Community-based tourism in Minas Gerais, Brazil, published in the CulTur journal, supervised by Dr. Edilaine Albertino Moraes.</p>
+                        <a href="https://periodicos.uesc.br/index.php/cultur/article/view/1070">See more</a>
+                    </div>
+                    <div class="ufjf3-projects">
+                        <img/>
+                        <h4>Digital Inclusion</h4>
+                        <p>Digital Inclusion: A Citizen Education Project in Partnership with Municipal School Dr. Augusto Glória.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="employment">
             <h3>Employment History</h3>
             <div class="career-gap">
@@ -87,28 +151,47 @@
                     and
                     expanding my technical knowledge in Information Technology.</p>
             </div>
+            <div class="army">
+                <h4>Webmaster | Army Museum Western Australia | Volunteer</h4>
+                <h4>Feb 2026 - Current</h4>
+                <div class="job-content">
+                    <h5>Responsibilities</h5>
+                    <ul>
+                        <li>Managed and updated website content through WordPress, ensuring accuracy, consistency, and compliance with organisational requirements.</li>
+                        <li>Worked with stakeholders to implement approved changes promptly and enhance website usability.</li>
+                    </ul>
+                    <h5>Key Achievements</h5>
+                    <ul>
+                        <li>Translated stakeholder requests into clear and organised web pages, enhancing navigation and improving the overall user experience.</li>
+                        <li>Secured content organisation to effectively enhance accessibility and usability.</li>
+                    </ul>
+                </div>
+            <div>
             <div class="coles">
                 <h4>Retail Team Member - Coles Supermarket</h4>
                 <h4>Nov 2024 - Dec 2025</h4>
-                <h5>Responsibilities</h5>
-                <ul>
-                    <li>Extensive interaction with customer which improved my English language skills.</li>
-                    <li>Worked collaboratively to achieve daily targets and ensure smooth store operations.</li>
-                    <li>Followed operational and food safety procedures with accuracy and consistency to maintain high
-                        store standards.</li>
-                </ul>
-                <h5>Key Achievements</h5>
-                <ul>
-                    <li>Strong time management and organisational skills by efficiently completing multiple tasks within
-                        tight timeframes.</li>
-                    <li>Identify and resolve issues on the flor, contributing to improved workflow and customer
-                        satisfaction.</li>
-                </ul>
+                <div class="job-content">
+                    <h5>Responsibilities</h5>
+                    <ul>
+                        <li>Extensive interaction with customer which improved my English language skills.</li>
+                        <li>Worked collaboratively to achieve daily targets and ensure smooth store operations.</li>
+                        <li>Followed operational and food safety procedures with accuracy and consistency to maintain high
+                            store standards.</li>
+                    </ul>
+                    <h5>Key Achievements</h5>
+                    <ul>
+                        <li>Strong time management and organisational skills by efficiently completing multiple tasks within
+                            tight timeframes.</li>
+                        <li>Identify and resolve issues on the flor, contributing to improved workflow and customer
+                            satisfaction.</li>
+                    </ul>
+                </div>
             </div>
             <div class="iebt">
                 <h4>Software Engineer – IEBT Digital [200 employees, Annual turnover $5.4M]</h4>
                 <h4>Feb 2022 – Oct 2023</h4>
-                <h5>Responsibilities</h5>
+                <div class="job-content">
+                    <h5>Responsibilities</h5>
                 <ul>
                     <li>
                         Designed, developed, and maintained back-end systems for the 123Milhas’ e-commerce platform
@@ -138,6 +221,7 @@
                         and scalable software solutions.
                     </li>
                 </ul>
+                </div>
             </div>
         </div>
     </main>
