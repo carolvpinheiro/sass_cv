@@ -25,15 +25,16 @@ $contents:
     "employment";
 
 // List of projects path
-$projects:
-    "tafe1" "../images/power-bi-dashboard2.png.webp",
-    "tafe2" "../images/digitization-healthcare-health-2-banner1200.webp",
-    "tafe3" "../images/resume.png",
-    "trybe1" "../images/Algorithms.jpg",
-    "trybe2" "../images/recipes-app.png",
-    "ufjf1" "../images/é-feito-feira.jpg.webp",
-    "ufjf2" "../images/tourism-community.png",
-    "ufjf3" "../images/SJN75-augustogloria.jpg";
+$projects: (
+    "tafe1": "../images/power-bi-dashboard2.png.webp",
+    "tafe2": "../images/digitization-healthcare-health-2-banner1200.webp",
+    "tafe3": "../images/resume.png",
+    "trybe1": "../images/Algorithms.jpg",
+    "trybe2": "../images/recipes-app.png",
+    "ufjf1": "../images/é-feito-feira.jpg.webp",
+    "ufjf2": "../images/tourism-community.png",
+    "ufjf3": "../images/SJN75-augustogloria.jpg"
+);
 
 // Function spacing variables
 $base-padding: 8px;
