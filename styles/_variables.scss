@@ -1,4 +1,39 @@
 $main-width: 1024px;
 $font-stack: Arial, Helvetica;
-$background-color: gray;
-$theme: ligth;
+
+// Colors
+$background-light-color: rgb(254, 240, 233);
+$background-dark-color: black;
+$text-color: rgb(44, 29, 0);
+$background-card-color: rgb(255, 247, 243);
+
+// Theme seting
+$theme: light;
+
+// List of icons name
+$icons:
+    "email",
+    "github",
+    "linkedin",
+    "phone";
+
+// List of content topcs
+$contents:
+    "summary",
+    "skills",
+    "qualifications",
+    "employment";
+
+// List of projects path
+$projects:
+    "tafe1" "../images/power-bi-dashboard2.png.webp",
+    "tafe2" "../images/digitization-healthcare-health-2-banner1200.webp",
+    "tafe3" "../images/resume.png",
+    "trybe1" "../images/Algorithms.jpg",
+    "trybe2" "../images/recipes-app.png",
+    "ufjf1" "../images/é-feito-feira.jpg.webp",
+    "ufjf2" "../images/tourism-community.png",
+    "ufjf3" "../images/SJN75-augustogloria.jpg";
+
+// Function spacing variables
+$base-padding: 8px;

@@ -1,0 +1,6 @@
+@use 'variables';
+
+//function for consistent spacing
+@function spacing($multiplier) {
+    @return variables.$base-padding * $multiplier;
+}

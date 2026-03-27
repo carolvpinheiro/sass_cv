@@ -1,0 +1,26 @@
+@use 'variables';
+
+// Reset buttons 
+@mixin reset-btn {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    list-style: none;
+    background: variables.$background-light-color;
+}
+
+// Set list style
+@mixin horizontal-list($type: true) {
+    @if $type {
+        ul {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            list-style: disc;
+        }
+    } @else {
+        li {
+            list-style: square;
+        }
+    }
+}
