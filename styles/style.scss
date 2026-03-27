@@ -28,6 +28,19 @@ body {
     }
 }
 
+// Cleaner grouping for headings
+:is(h3, h4, h5) {
+    font-family: variables.$font-stack;
+    letter-spacing: 0.5px;
+}
+
+// Visual hierarchy just the first h3 of main is underlined
+main > div:first-of-type {
+    h3 {
+        text-decoration: underline;
+    }
+}
+
 // icons nav
 @each $name in variables.$icons {
     .icon-#{$name} {
@@ -41,6 +54,11 @@ body {
         font-size: 16px;
         text-decoration: none;
     }
+}
+
+// Margin bottom content using where
+:where(.summary, .skills, .employment) {
+    margin-bottom: functions.spacing(3);
 }
 
 // Space between contents
@@ -67,19 +85,14 @@ body {
 }
 
 // Vertical lists with mixin
-.army {
+:where(.army, .coles, .iebt) {
     @include mixins.horizontal-list(false);
     @extend %toollist;
 }
 
-.coles {
-    @include mixins.horizontal-list(false);
-    @extend %toollist;
-}
-
-.iebt {
-    @include mixins.horizontal-list(false);
-    @extend %toollist;
+// Style parent if it contains projects button
+div:has(.projects-btn) {
+    border-top: 1px solid variables.$text-color;
 }
 
 // Grid system max 4 cards per row
@@ -88,7 +101,16 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: functions.spacing(2);
     margin-bottom: functions.spacing(3);
-  }
+}
+
+// alternate cards using nth-child(odd) and (even)
+.card-section div:nth-child(odd) {
+    background-color: variables.$background-card-color;
+}
+.card-section div:nth-child(even) {
+    background-color: variables.$background-card-color-even;
+}
+
 
 // Placeholder (base card style)
 %card-base {
@@ -125,4 +147,14 @@ body {
 // Reset button with mixin
 button {
     @include mixins.reset-btn;
+    // Exclude buttons
+    a:not(.projects-btn) {
+        text-decoration: underline;
+    }
+}
+
+// Only shows focus when using keyboard
+.projects-btn:focus-visible {
+    outline: 3px solid variables.$text-color;
+    background-color: variables.$background-card-color;
 }

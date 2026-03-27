@@ -15,8 +15,17 @@ body main {
 }
 
 .main-content {
-  background-color: rgb(254, 240, 233);
+  background-color: rgb(255, 245, 241);
   color: rgb(44, 29, 0);
+}
+
+:is(h3, h4, h5) {
+  font-family: Arial, Helvetica;
+  letter-spacing: 0.5px;
+}
+
+main > div:first-of-type h3 {
+  text-decoration: underline;
 }
 
 .icon-email {
@@ -67,6 +76,10 @@ body main {
   text-decoration: none;
 }
 
+:where(.summary, .skills, .employment) {
+  margin-bottom: 24px;
+}
+
 .summary {
   padding-top: 32px;
 }
@@ -95,10 +108,10 @@ body main {
   line-height: 0.5;
 }
 
-.iebt, .coles, .army {
+:where(.army, .coles, .iebt) {
   padding-top: 16px;
 }
-.iebt .job-content, .coles .job-content, .army .job-content {
+:where(.army, .coles, .iebt) .job-content {
   padding: 4px;
 }
 
@@ -109,16 +122,12 @@ body main {
   list-style: disc;
 }
 
-.army li {
+:where(.army, .coles, .iebt) li {
   list-style: square;
 }
 
-.coles li {
-  list-style: square;
-}
-
-.iebt li {
-  list-style: square;
+div:has(.projects-btn) {
+  border-top: 1px solid rgb(44, 29, 0);
 }
 
 .card-section {
@@ -128,8 +137,16 @@ body main {
   margin-bottom: 24px;
 }
 
+.card-section div:nth-child(odd) {
+  background-color: rgb(254, 240, 233);
+}
+
+.card-section div:nth-child(even) {
+  background-color: rgb(235, 213, 203);
+}
+
 .ufjf3-projects, .ufjf2-projects, .ufjf1-projects, .trybe2-projects, .trybe1-projects, .tafe3-projects, .tafe2-projects, .tafe1-projects {
-  background-color: rgb(255, 247, 243);
+  background-color: rgb(254, 240, 233);
   box-sizing: border-box;
   border-radius: 6px;
   padding: 16px;
@@ -220,5 +237,13 @@ button {
   padding: 0px;
   border: none;
   list-style: none;
-  background: rgb(254, 240, 233);
+  background: rgb(255, 245, 241);
+}
+button a:not(.projects-btn) {
+  text-decoration: underline;
+}
+
+.projects-btn:focus-visible {
+  outline: 3px solid rgb(44, 29, 0);
+  background-color: rgb(254, 240, 233);
 }/*# sourceMappingURL=style.css.map */
