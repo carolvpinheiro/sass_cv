@@ -140,13 +140,18 @@ div:has(.projects-btn) {
 .card-section div:nth-child(odd) {
   background-color: rgb(254, 240, 233);
 }
+.card-section div:nth-child(odd) div {
+  background-color: rgb(254, 240, 233);
+}
 
 .card-section div:nth-child(even) {
   background-color: rgb(235, 213, 203);
 }
+.card-section div:nth-child(even) div {
+  background-color: rgb(235, 213, 203);
+}
 
 .ufjf3-projects, .ufjf2-projects, .ufjf1-projects, .trybe2-projects, .trybe1-projects, .tafe3-projects, .tafe2-projects, .tafe1-projects {
-  background-color: rgb(254, 240, 233);
   box-sizing: border-box;
   border-radius: 6px;
   padding: 16px;
@@ -160,76 +165,84 @@ div:has(.projects-btn) {
   transform: translateY(-5px);
 }
 
-.tafe1-projects img {
+.tafe1-projects div {
   background-image: url(../images/power-bi-dashboard2.png.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
   width: 100px;
-  padding: 64px;
+  height: 100%;
+  padding: 80px;
 }
 
-.tafe2-projects img {
+.tafe2-projects div {
   background-image: url(../images/digitization-healthcare-health-2-banner1200.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
   width: 100px;
-  padding: 64px;
+  height: 100%;
+  padding: 80px;
 }
 
-.tafe3-projects img {
+.tafe3-projects div {
   background-image: url(../images/resume.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
   width: 100px;
-  padding: 64px;
+  height: 100%;
+  padding: 80px;
 }
 
-.trybe1-projects img {
+.trybe1-projects div {
   background-image: url(../images/Algorithms.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
   width: 100px;
-  padding: 64px;
+  height: 100%;
+  padding: 80px;
 }
 
-.trybe2-projects img {
+.trybe2-projects div {
   background-image: url(../images/recipes-app.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
   width: 100px;
-  padding: 64px;
+  height: 100%;
+  padding: 80px;
 }
 
-.ufjf1-projects img {
+.ufjf1-projects div {
   background-image: url(../images/é-feito-feira.jpg.webp);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
   width: 100px;
-  padding: 64px;
+  height: 100%;
+  padding: 80px;
 }
 
-.ufjf2-projects img {
+.ufjf2-projects div {
   background-image: url(../images/tourism-community.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
   width: 100px;
-  padding: 64px;
+  height: 100%;
+  padding: 80px;
 }
 
-.ufjf3-projects img {
+.ufjf3-projects div {
   background-image: url(../images/SJN75-augustogloria.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
   width: 100px;
-  padding: 64px;
+  height: 100%;
+  padding: 80px;
 }
 
 button {

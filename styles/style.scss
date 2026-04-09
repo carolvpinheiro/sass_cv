@@ -106,15 +106,19 @@ div:has(.projects-btn) {
 // alternate cards using nth-child(odd) and (even)
 .card-section div:nth-child(odd) {
     background-color: variables.$background-card-color;
+    div {
+        background-color: variables.$background-card-color;
+    }
 }
 .card-section div:nth-child(even) {
     background-color: variables.$background-card-color-even;
+    div {
+        background-color: variables.$background-card-color-even;
+    }
 }
-
 
 // Placeholder (base card style)
 %card-base {
-    background-color: variables.$background-card-color;
     box-sizing: border-box;
     border-radius: 6px;
     padding: functions.spacing(2);
@@ -133,13 +137,14 @@ div:has(.projects-btn) {
 @each $name, $path in variables.$projects {
     .#{$name}-projects {
         @extend %card-base;
-        img {
+        div {
             background-image: url(#{$path});
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 100%;
             width: 100px;
-            padding: functions.spacing(8);
+            height: 100%;
+            padding: functions.spacing(10);
         }
     }
 }
